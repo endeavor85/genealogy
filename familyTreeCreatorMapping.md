@@ -24,8 +24,8 @@ Color Legend
 - Spouses[] : **Spouse** --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMS : @FAM > HUSB|WIFE : @INDI*
 - Children[] : **Child**
   - multiple:
-  - --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMS : @FAM > CHIL*
-  - --> *![derived](https://placehold.it/10/ccff11?text=+) - INDI > ASSO*
+    - --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMS : @FAM > CHIL*
+    - --> *![derived](https://placehold.it/10/ccff11?text=+) - INDI > ASSO*
 - Events[] : **Event** --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN*
 - Medical --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
   - Height --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
