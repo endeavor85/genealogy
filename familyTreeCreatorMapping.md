@@ -38,6 +38,8 @@ This file shows the mapping between **Mindscape Family Tree Creator Deluxe** and
   - E-mail
   - Details
   - Sources[] : **Source**
+- Album
+  - ...
 - Notes
 - (Siblings[])
 - (Mother)
