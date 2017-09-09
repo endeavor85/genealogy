@@ -3,6 +3,7 @@ This file shows the mapping between **Mindscape Family Tree Creator Deluxe** and
 Color Legend
 - ![direct](https://placehold.it/10/00ff00?text=+) - mapped directly
 - ![multiple](https://placehold.it/10/ccff11?text=+) - split across multiple Gedcom fields
+- ![derived](https://placehold.it/10/ccff11?text=+) - derived from other Gedcom fields and linked references
 - ![generic](https://placehold.it/10/ffff00?text=+) - part of more generic Gedcom field
 - ![partial](https://placehold.it/10/ffaa00?text=+) - mapped partially
 - ![unmapped](https://placehold.it/10/ff0000?text=+) - unmapped
@@ -20,36 +21,39 @@ Color Legend
 - Occupation --> *![direct](https://placehold.it/10/00ff00?text=+) INDI > OCCU*
 - Title --> *![direct](https://placehold.it/10/00ff00?text=+) INDI > TITL*
 - Reference Number --> *![direct](https://placehold.it/10/00ff00?text=+) INDI*
-- Spouses[] : **Spouse**
+- Spouses[] : **Spouse** --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMS (FAM) > HUSB|WIFE*
 - Children[] : **Child**
+  - multiple:
+  - --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMS (FAM) > CHIL*
+  - --> *![derived](https://placehold.it/10/ccff11?text=+) - INDI > ASSO*
 - Events[] : **Event**
-- Medical --> *![generic](https://placehold.it/10/ffff00?text=+) INDI > DSCR*
-  - Height --> *![generic](https://placehold.it/10/ffff00?text=+) INDI > DSCR*
-  - Weight --> *![generic](https://placehold.it/10/ffff00?text=+) INDI > DSCR*
-  - Eyes --> *![generic](https://placehold.it/10/ffff00?text=+) INDI > DSCR*
-  - Hair --> *![generic](https://placehold.it/10/ffff00?text=+) INDI > DSCR*
-  - Blood Type --> *![unknown](https://placehold.it/10/00ffff?text=+) - unknown*
-  - Cause of Death *![unknown](https://placehold.it/10/00ffff?text=+) - unknown*
+- Medical --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
+  - Height --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
+  - Weight --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
+  - Eyes --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
+  - Hair --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
+  - Blood Type --> *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
+  - Cause of Death *![generic](https://placehold.it/10/ffff00?text=+) - INDI > DSCR*
   - Age --> *![direct](https://placehold.it/10/00ff00?text=+) - calculated, not needed*
-  - Additional Medical Information --> *![unmapped](https://placehold.it/10/ff0000?text=+) unmapped*
+  - Additional Medical Information --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > DSCR > NOTE*
   - Sources[] : **Source**
 - Address
-  - Street & Number
-  - City/Town
-  - County/Region
-  - State/Province
-  - Country
-  - Zip/Postal Code
-  - Phone
-  - E-mail
+  - Street & Number --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > ADDR*
+  - City/Town --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > CITY*
+  - County/Region --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > ADDR2*
+  - State/Province --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > STAE*
+  - Country --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > CTRY*
+  - Zip/Postal Code --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > POST*
+  - Phone --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > PHON*
+  - E-mail --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > EVEN > _EMAIL*
   - Details
   - Sources[] : **Source**
 - Album
   - ...
-- Notes --> *![multiple](https://placehold.it/10/ccff11?text=+) INDI > NOTE [ > CONC,CONT]*
-- (Siblings[])
-- (Mother)
-- (Father)
+- Notes --> *![direct](https://placehold.it/10/00ff00?text=+) - INDI > NOTE*
+- (Siblings[]) --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMC (FAM) > CHIL*
+- (Mother) --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMC (FAM) > CHIL*
+- (Father) --> *![derived](https://placehold.it/10/ccff11?text=+) - FAMC (FAM) > CHIL*
 
 ### Spouse
 
@@ -76,11 +80,11 @@ Color Legend
 
 ### Source
 
-- Source --> *![direct](https://placehold.it/10/00ff00?text=+) SOUR > TITLE*
-- Reliability --> *![direct](https://placehold.it/10/ff0000?text=+) [object > SOUR > QUAY](http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gcch2.htm#SOURCE_CITATION)*
-- Type --> *![direct](https://placehold.it/10/00ff00?text=+) SOUR > REFN > TYPE*
-- Details --> *![direct](https://placehold.it/10/00ff00?text=+) object > SOUR > NOTE*
-- (Source Info) --> *![generic](https://placehold.it/10/ffff00?text=+) SOUR > TEXT*
+- Source --> *![direct](https://placehold.it/10/00ff00?text=+) - SOUR > TITLE*
+- Reliability --> *![derived](https://placehold.it/10/ccff11?text=+) - [object > SOUR > QUAY](http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gcch2.htm#SOURCE_CITATION)*
+- Type --> *![direct](https://placehold.it/10/00ff00?text=+) - SOUR > REFN > TYPE*
+- Details --> *![derived](https://placehold.it/10/ccff11?text=+) - object > SOUR > NOTE*
+- (Source Info) --> *![generic](https://placehold.it/10/ffff00?text=+) - SOUR > TEXT*
 
 ### Event
 
