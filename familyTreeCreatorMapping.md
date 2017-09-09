@@ -12,6 +12,7 @@ Color Legend
 ### Individual
 
 - Name --> *![direct](https://placehold.it/10/00ff00?text=+) INDI > NAME*
+  - may want to convert to the [Gedcom 5.5 PERSONAL_NAME_STRUCTURE](http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gcch2.htm#PERSONAL_NAME_STRUCTURE)
 - Date of Birth --> *![direct](https://placehold.it/10/00ff00?text=+) INDI > BIRT > DATE*
 - Place of Birth --> *![direct](https://placehold.it/10/00ff00?text=+) INDI > BIRT > PLAC*
 - Sex --> *![direct](https://placehold.it/10/00ff00?text=+) INDI > SEX*
