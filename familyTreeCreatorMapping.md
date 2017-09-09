@@ -76,9 +76,11 @@ Color Legend
 
 ### Source
 
-- Source
-- Reliability
-- Details
+- Source --> *![direct](https://placehold.it/10/00ff00?text=+) SOUR > TITLE*
+- Reliability --> *![direct](https://placehold.it/10/ff0000?text=+) [object > SOUR > QUAY](http://homepages.rootsweb.ancestry.com/~pmcbride/gedcom/55gcch2.htm#SOURCE_CITATION)*
+- Type --> *![direct](https://placehold.it/10/00ff00?text=+) SOUR > REFN > TYPE*
+- Details --> *![direct](https://placehold.it/10/00ff00?text=+) object > SOUR > NOTE*
+- (Source Info) --> *![generic](https://placehold.it/10/ffff00?text=+) SOUR > TEXT*
 
 ### Event
 
